@@ -1,3 +1,8 @@
+/**
+ * @author Pedro Martín del Campo González <pedro.martin@uabc.edu.mx>
+ * @date 25/08/2018
+ */
+
 #include <stdbool.h>
 #include <string.h>
 #include "base_to_decimal.h"

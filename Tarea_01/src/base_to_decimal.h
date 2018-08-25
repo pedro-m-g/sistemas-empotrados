@@ -1,3 +1,8 @@
+/**
+ * @author Pedro Martín del Campo González <pedro.martin@uabc.edu.mx>
+ * @date 25/08/2018
+ */
+
 #ifndef BASE_TO_DECIMAL_H
 
 #define BASE_TO_DECIMAL_H

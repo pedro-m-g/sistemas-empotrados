@@ -1,10 +1,6 @@
 /**
  * @author Pedro Martín del Campo González <pedro.martin@uabc.edu.mx>
  * @date 25/08/2018
- *
- * Programa que acepta como entrada un número de máximo 255 dígitos y una base entre 2 y 37
- * y lo convierte a su equivalente en base 10
- *
  */
 
 #include <stdio.h>
@@ -13,6 +9,12 @@
 #define MIN_BASE 2
 #define MAX_BASE 37
 
+/**
+ * Programa que acepta como entrada un número de máximo 255 dígitos y una base entre 2 y 37
+ * y lo convierte a su equivalente en base 10
+ *
+ * @return Estatus de ejecución
+ */
 int main()
 {
     char n[255];
