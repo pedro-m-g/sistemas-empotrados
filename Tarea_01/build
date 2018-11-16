@@ -1,3 +1,0 @@
-APP_NAME=b2dec
-
-gcc -Wall src/*.c -o bin/$APP_NAME
