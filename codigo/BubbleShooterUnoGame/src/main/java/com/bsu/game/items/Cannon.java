@@ -6,8 +6,10 @@
 package com.bsu.game.items;
 
 import javafx.scene.Parent;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Rotate;
 
 /**
  *
@@ -15,18 +17,25 @@ import javafx.scene.image.ImageView;
  */
 public class Cannon extends Parent {
     
-    private final String src = "/icons/cannon_sprite.png";
-    private final ImageView view = new ImageView(new Image(getClass().getResourceAsStream(src)));
-    
-    private final int BASE_ANGLE = 180;
+    private final Circle base = new Circle(50, Color.DIMGRAY);
+    private final Rectangle view = new Rectangle(30, 60, Color.DIMGRAY);
+
+    private int angle = 20;
+    private final Rotate rotate = new Rotate(angle);
     
     public Cannon() {
-        getChildren().add(view);
-        rotate(0);
+        base.setLayoutX(60);
+        rotate.setPivotX(60);
+        rotate.setPivotY(15);
+        rotate.setAxis(Rotate.Z_AXIS);
+        view.getTransforms().addAll(rotate, new Rotate(90));
+        getChildren().addAll(view, base);
     }
     
-    public void rotate(int angle) {
-        view.setRotate(angle);
+    public final void rotate(int angle) {
+        System.out.println("ROTATE " + angle);
+        this.angle = angle;
+        rotate.setAngle(angle);
     }
     
 }

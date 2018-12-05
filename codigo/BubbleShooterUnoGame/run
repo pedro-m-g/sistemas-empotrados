@@ -1,0 +1,2 @@
+mvn install -o
+java -jar target/BubbleShooterUnoGame-1.0-SNAPSHOT.jar

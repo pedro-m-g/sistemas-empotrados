@@ -27,7 +27,7 @@
 #define BREATH_DELAY 1
 
 int previousAngle = 0;
-Servo servo;
+// Servo servo;
 
 /**
  * Configurar puertos
@@ -44,7 +44,7 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   pinMode(BUTTON_PIN, INPUT);
   pinMode(ANGLE_PIN, INPUT);
-  servo.attach(SERVO_PIN);
+  // servo.attach(SERVO_PIN);
   Serial.begin(9600);
 }
 
@@ -65,7 +65,7 @@ void angleAction() {
   if (angle != previousAngle) {
     Serial.print("ROTATE ");
     Serial.println(angle);
-    servo.write(angle);
+    // servo.write(angle);
     previousAngle = angle;
   }
 }
@@ -78,7 +78,7 @@ void angleAction() {
  */
 int toDegrees(int value) {
   int angle = map(value, MIN_ANGLE_INPUT, MAX_ANGLE_INPUT, MIN_ANGLE, MAX_ANGLE);
-  return angle;
+  return 180 - angle;
 }
 
 /**

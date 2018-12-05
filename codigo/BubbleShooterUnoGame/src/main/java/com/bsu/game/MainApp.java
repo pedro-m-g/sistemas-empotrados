@@ -3,9 +3,9 @@ package com.bsu.game;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 
@@ -14,7 +14,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
-        Parent root = loader.load();
+        AnchorPane root = loader.load();
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
@@ -23,8 +23,6 @@ public class MainApp extends Application {
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/icons/cannon.png")));
         stage.setScene(scene);
         stage.show();
-        
-        FXMLController controller = loader.getController();
     }
 
     /**
