@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="root" prefHeight="600" prefWidth="380" xmlns:fx="http://javafx.com/fxml" fx:controller="com.bsu.game.FXMLController">
+<AnchorPane fx:id="root" prefHeight="600" maxHeight="600" minHeight="600" prefWidth="380" maxWidth="380" minWidth="380" xmlns:fx="http://javafx.com/fxml" fx:controller="com.bsu.game.FXMLController">
     <children>
         
     </children>

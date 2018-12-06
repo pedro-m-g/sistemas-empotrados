@@ -3,6 +3,7 @@ package com.bsu.game.control;
 import com.bsu.game.command.Command;
 import com.bsu.game.command.CommandPalette;
 import com.bsu.game.command.RotateCommand;
+import com.bsu.game.command.ShootCommand;
 import com.bsu.game.items.Cannon;
 
 public class ControlService implements Controlled, Runnable {
@@ -35,6 +36,7 @@ public class ControlService implements Controlled, Runnable {
 
     private void commands() {
         palette.setCommand("ROTATE", new RotateCommand(cannon));
+        palette.setCommand("SHOOT", new ShootCommand(cannon));
     }
 
 }

@@ -33,11 +33,15 @@ public class ControlReader implements SerialPortDataListener {
         port.readBytes(newData, newData.length);
         String data = new String(newData);
         buffer.append(data);
-        if (data.endsWith("\n")) {
-            String[] components = buffer.toString().trim().split(" ");
+        String processing = buffer.toString();
+        while (processing.contains("\n")) {
+            int index = processing.indexOf("\n");
+            String part = processing.substring(0, index);
+            String[] components = part.trim().split(" ");
             String command = components[0];
             String[] args = parseArgs(components);
             controlled.command(command, args);
+            processing = processing.substring(index + 1);
             buffer = new StringBuffer();
         }
     }
