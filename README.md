@@ -1,5 +1,11 @@
-# Sistemas Empotrados
+# Bubble Shooter Uno
 
-Tareas y ejercicios realizados en el curso de Sistemas Empotrados 2018-2.
+Proyecto Bubble Shooter Uno.
 
-Cada folder incluye su propia documentación.
+- *codigo* Folder que contiene la implementación del proyecto
+	- *BubbleShooterUnoGame* Videojuego
+		- *src* Código fuente del proyecto
+		- *target* Ejecutables
+	- *Bubble_Shooter_Uno_Sketch* Sketch del control (Arduino)
+- *documentacion* Documentación del prroyecto (diagramas, reporte)
+	- *figuras* Diagramas e imágenes
